@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Prueba Brazo Robótico XR</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+
+    <!-- ========================= -->
+    <!-- CARGA DEL MODELO GLB -->
+    <!-- ========================= -->
+
+    <a-assets>
+
+        <a-asset-item
+            id="modelo-brazo"
+            src="brazo_robotico.glb">
+        </a-asset-item>
+
+    </a-assets>
+
+
+    <!-- ========================= -->
+    <!-- BRAZO ROBÓTICO -->
+    <!-- ========================= -->
+
+    <a-entity
+        gltf-model="#modelo-brazo"
+        position="0 0 -4"
+        rotation="0 0 0"
+        scale="0.001 0.001 0.001">
+    </a-entity>
+
+
+    <!-- ========================= -->
+    <!-- PISO -->
+    <!-- ========================= -->
+
+    <a-plane
+        rotation="-90 0 0"
+        width="10"
+        height="10"
+        color="#555555">
+    </a-plane>
+
+
+    <!-- ========================= -->
+    <!-- CIELO -->
+    <!-- ========================= -->
+
+    <a-sky color="#ECECEC"></a-sky>
+
+
+</a-scene>
+
+</body>
+
+</html>

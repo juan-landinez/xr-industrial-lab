@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Laboratorio XR Industrial</title>
+    <title>Laboratorio XR Industrial - AR</title>
 
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
 </head>
 
 <body>
 
-<a-scene>
+<a-scene
+    webxr="optionalFeatures: hit-test;"
+    ar-mode-ui="enabled: true;">
 
     <!-- ========================= -->
     <!-- CARGA DEL MODELO GLB -->

@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+
+    <title>Prueba Brazo Robótico XR</title>
+
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
 </head>
 
@@ -10,7 +14,21 @@
 <a-scene>
 
     <!-- ========================= -->
-    <!-- PISO DE LA CELDA INDUSTRIAL -->
+    <!-- CARGA DEL MODELO GLB -->
+    <!-- ========================= -->
+
+    <a-assets>
+
+        <a-asset-item
+            id="modelo-brazo"
+            src="brazo_robotico.glb">
+        </a-asset-item>
+
+    </a-assets>
+
+
+    <!-- ========================= -->
+    <!-- PISO -->
     <!-- ========================= -->
 
     <a-plane
@@ -34,7 +52,7 @@
     </a-box>
 
 
-    <!-- Rodillos de la banda -->
+    <!-- Rodillos -->
 
     <a-cylinder
         position="-2.8 0.95 -3"
@@ -51,25 +69,6 @@
         height="1.4"
         color="#AAAAAA">
     </a-cylinder>
-
-
-    <!-- Soportes de la banda -->
-
-    <a-box
-        position="-2.5 0.2 -3"
-        width="0.3"
-        height="1"
-        depth="0.3"
-        color="#222222">
-    </a-box>
-
-    <a-box
-        position="2.5 0.2 -3"
-        width="0.3"
-        height="1"
-        depth="0.3"
-        color="#222222">
-    </a-box>
 
 
     <!-- ========================= -->
@@ -102,109 +101,16 @@
 
 
     <!-- ========================= -->
-    <!-- TANQUE DE ALMACENAMIENTO -->
+    <!-- BRAZO ROBÓTICO -->
     <!-- ========================= -->
 
-    <a-cylinder
-        position="-3 2.3 -5"
-        radius="1.2"
-        height="3"
-        color="#3A7CA5">
-    </a-cylinder>
-
-
-    <!-- Tapa del tanque -->
-
-    <a-cylinder
-        position="-3 3.85 -5"
-        radius="1.25"
-        height="0.2"
-        color="#777777">
-    </a-cylinder>
-
-
-    <!-- Base del tanque -->
-
-    <a-cylinder
-        position="-3 0.5 -5"
-        radius="1.4"
-        height="0.3"
-        color="#222222">
-    </a-cylinder>
-
-
-    <!-- ========================= -->
-    <!-- SENSOR DEL TANQUE -->
-    <!-- ========================= -->
-
-    <a-sphere
-        position="-2.05 2.5 -4.15"
-        radius="0.18"
-        color="#FF0000">
-    </a-sphere>
-
-
-    <!-- ========================= -->
-    <!-- ESTRUCTURA SUPERIOR -->
-    <!-- ========================= -->
-
-    <a-box
-        position="0 3.5 -3"
-        width="7"
-        height="0.3"
-        depth="0.3"
-        color="#444444">
-    </a-box>
-
-    <a-box
-        position="-3.3 2 -3"
-        width="0.3"
-        height="4"
-        depth="0.3"
-        color="#444444">
-    </a-box>
-
-    <a-box
-        position="3.3 2 -3"
-        width="0.3"
-        height="4"
-        depth="0.3"
-        color="#444444">
-    </a-box>
-
-
-    <!-- ========================= -->
-    <!-- PANEL DE CONTROL -->
-    <!-- ========================= -->
-
-    <a-box
-        position="3 1.5 -2"
-        width="1.2"
-        height="1.8"
-        depth="0.3"
-        color="#222222">
-    </a-box>
-
-
-    <!-- Indicadores del panel -->
-
-    <a-sphere
-        position="2.75 1.9 -1.8"
-        radius="0.12"
-        color="#00FF00">
-    </a-sphere>
-
-    <a-sphere
-        position="3.25 1.9 -1.8"
-        radius="0.12"
-        color="#FF0000">
-    </a-sphere>
-
-    <a-sphere
-        position="2.75 1.5 -1.8"
-        radius="0.12"
-        color="#FFFF00">
-    </a-sphere>
+    <a-entity
+        id="brazo-robotico"
+        gltf-model="#modelo-brazo"
+        position="3 0 -3"
+        rotation="0 0 0"
+        scale="0.01 0.01 0.01">
+    </a-entity>
 
 
     <!-- ========================= -->

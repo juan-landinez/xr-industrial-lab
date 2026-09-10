@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,8 @@
 
 <a-scene
     webxr="optionalFeatures: hit-test;"
-    ar-mode-ui="enabled: true;">
+    ar-mode-ui="enabled: true;"
+    renderer="alpha: true;">
 
     <!-- ========================= -->
     <!-- CARGA DEL MODELO GLB -->
@@ -42,7 +44,7 @@
     </a-box>
 
 
-    <!-- Rodillos de la banda -->
+    <!-- Rodillos -->
 
     <a-cylinder
         position="-2.8 0.95 -3"
@@ -61,7 +63,7 @@
     </a-cylinder>
 
 
-    <!-- Soportes de la banda -->
+    <!-- Soportes -->
 
     <a-box
         position="-2.5 0.2 -3"
@@ -110,7 +112,7 @@
 
 
     <!-- ========================= -->
-    <!-- TANQUE DE ALMACENAMIENTO -->
+    <!-- TANQUE -->
     <!-- ========================= -->
 
     <a-cylinder
@@ -121,7 +123,7 @@
     </a-cylinder>
 
 
-    <!-- Tapa del tanque -->
+    <!-- Tapa -->
 
     <a-cylinder
         position="-3 3.85 -5"
@@ -131,7 +133,7 @@
     </a-cylinder>
 
 
-    <!-- Base del tanque -->
+    <!-- Base -->
 
     <a-cylinder
         position="-3 0.5 -5"
@@ -142,7 +144,7 @@
 
 
     <!-- ========================= -->
-    <!-- SENSOR DEL TANQUE -->
+    <!-- SENSOR -->
     <!-- ========================= -->
 
     <a-sphere
@@ -207,7 +209,7 @@
     </a-box>
 
 
-    <!-- Indicadores del panel -->
+    <!-- Indicadores -->
 
     <a-sphere
         position="2.75 1.9 -1.8"
@@ -226,34 +228,6 @@
         radius="0.12"
         color="#FFFF00">
     </a-sphere>
-
-
-</a-scene>
-
-</body>
-
-        </html>        rotation="0 0 0"
-        scale="0.01 0.01 0.01">
-    </a-entity>
-
-
-    <!-- ========================= -->
-    <!-- PISO -->
-    <!-- ========================= -->
-
-    <a-plane
-        rotation="-90 0 0"
-        width="10"
-        height="10"
-        color="#555555">
-    </a-plane>
-
-
-    <!-- ========================= -->
-    <!-- CIELO -->
-    <!-- ========================= -->
-
-    <a-sky color="#ECECEC"></a-sky>
 
 
 </a-scene>

@@ -4,21 +4,17 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Laboratorio XR Industrial - AR</title>
+    <title>Laboratorio XR Industrial</title>
 
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
 </head>
 
 <body>
 
-<a-scene
-    embedded
-    webxr="optionalFeatures: hit-test;"
-    ar-mode-ui="enabled: true;"
-    renderer="alpha: true; colorManagement: true;">
+<a-scene>
 
     <!-- ========================= -->
-    <!-- MODELO GLB -->
+    <!-- CARGA DEL MODELO GLB -->
     <!-- ========================= -->
 
     <a-assets>
@@ -29,6 +25,18 @@
         </a-asset-item>
 
     </a-assets>
+
+
+    <!-- ========================= -->
+    <!-- PISO DE LA CELDA INDUSTRIAL -->
+    <!-- ========================= -->
+
+    <a-plane
+        rotation="-90 0 0"
+        width="14"
+        height="14"
+        color="#555555">
+    </a-plane>
 
 
     <!-- ========================= -->
@@ -44,9 +52,7 @@
     </a-box>
 
 
-    <!-- ========================= -->
-    <!-- RODILLOS -->
-    <!-- ========================= -->
+    <!-- Rodillos de la banda -->
 
     <a-cylinder
         position="-2.8 0.95 -3"
@@ -65,9 +71,7 @@
     </a-cylinder>
 
 
-    <!-- ========================= -->
-    <!-- SOPORTES -->
-    <!-- ========================= -->
+    <!-- Soportes de la banda -->
 
     <a-box
         position="-2.5 0.2 -3"
@@ -116,7 +120,7 @@
 
 
     <!-- ========================= -->
-    <!-- TANQUE -->
+    <!-- TANQUE DE ALMACENAMIENTO -->
     <!-- ========================= -->
 
     <a-cylinder
@@ -126,12 +130,18 @@
         color="#3A7CA5">
     </a-cylinder>
 
+
+    <!-- Tapa del tanque -->
+
     <a-cylinder
         position="-3 3.85 -5"
         radius="1.25"
         height="0.2"
         color="#777777">
     </a-cylinder>
+
+
+    <!-- Base del tanque -->
 
     <a-cylinder
         position="-3 0.5 -5"
@@ -142,7 +152,7 @@
 
 
     <!-- ========================= -->
-    <!-- SENSOR -->
+    <!-- SENSOR DEL TANQUE -->
     <!-- ========================= -->
 
     <a-sphere
@@ -207,9 +217,7 @@
     </a-box>
 
 
-    <!-- ========================= -->
-    <!-- INDICADORES -->
-    <!-- ========================= -->
+    <!-- Indicadores del panel -->
 
     <a-sphere
         position="2.75 1.9 -1.8"
@@ -230,8 +238,15 @@
     </a-sphere>
 
 
+    <!-- ========================= -->
+    <!-- CIELO -->
+    <!-- ========================= -->
+
+    <a-sky color="#ECECEC"></a-sky>
+
+
 </a-scene>
 
 </body>
 
-</html>
+    </html>
